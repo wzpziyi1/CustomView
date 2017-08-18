@@ -10,7 +10,8 @@ import {
 } from 'react-native'
 
 import CommonNavigatorBar from '../Common/CommonNavigatorBar';
-import CommonHighButton from '../Common/CommonHighButton'
+import CommonHighButton from '../Common/CommonHighButton';
+import CommonSelectedButton from '../Common/CommonSelectedButton'
 
 export default class Discover extends Component {
 
@@ -23,6 +24,19 @@ export default class Discover extends Component {
                               rightBarItem={this._renderRightItem()}
           />
           <View style={{backgroundColor:'yellow', flex:1}}>
+            <CommonSelectedButton
+                                  titleStyle={{color: 'gray', fontSize: 14}}
+                                  selectedTitleStyle={{color: 'orange', fontSize: 14}}
+                                  onPress={(btn)=>{
+                                    btn.setState({
+                                      isSelected: !btn.state.isSelected
+                                    })
+                                  }}
+                                  imgUri="mine-setting-icon"
+                                  selectedImgUri="mine-setting-icon-click"
+                                  buttonStyle={{backgroundColor: 'green', width: 100, height: 100}}
+                                  imgStyle={{width: 20, height: 20}}
+            />
           </View>
         </View>
     )
@@ -59,6 +73,4 @@ export default class Discover extends Component {
         />
     )
   }
-
-
 }
