@@ -10,10 +10,11 @@ import {
   Image
 } from 'react-native';
 
-import {Navigator} from 'react-native-deprecated-custom-components';
 import TabNavigator from 'react-native-tab-navigator';
 
 import TabNavigatorItem from "react-native-tab-navigator/TabNavigatorItem";
+
+import Discover from './Discover/Discover'
 
 export default class TabBar extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class TabBar extends Component {
   render() {
     return (
         <TabNavigator>
-          {this._renderTabItem(0, '首页', 'icon_tabbar_homepage', 'icon_tabbar_homepage_selected', <View style={{backgroundColor:'yellow', flex:1}}/>, 99)}
+          {this._renderTabItem(0, '首页', 'icon_tabbar_homepage', 'icon_tabbar_homepage_selected', <Discover navigator={this.props.navigator}/>, 99)}
           {this._renderTabItem(1, '个人', 'icon_tabbar_merchant_normal', 'icon_tabbar_merchant_selected', <View style={{backgroundColor:'blue', flex:1}}/>, 2)}
           {this._renderTabItem(2, '详情', 'icon_tabbar_misc', 'icon_tabbar_misc_selected', <View style={{backgroundColor:'green', flex:1}}/>, 0)}
           {this._renderTabItem(3, '购物车', 'icon_tabbar_mine', 'icon_tabbar_mine_selected', <View style={{backgroundColor:'white', flex:1}}/>, 3)}
@@ -61,7 +62,6 @@ export default class TabBar extends Component {
         </View>
     )
   }
-
 }
 
 var styles = StyleSheet.create({

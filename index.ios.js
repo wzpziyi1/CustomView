@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-import TabBar from './Demo/TabBar';
+import NavigatorBar from './Demo/NavigatorBar'
 
 
 
@@ -20,7 +20,7 @@ import TabBar from './Demo/TabBar';
 export default class TabAndNavigator extends Component {
   render() {
     return (
-        <TabBar />
+        <NavigatorBar />
     );
   }
 }
