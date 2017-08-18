@@ -75,7 +75,7 @@ var styles = StyleSheet.create({
     flex: 1,
     height: 44,
     alignItems: 'center',
-    justifyContent: 'center'
+    marginLeft: -12,
   },
 
   titleViewStyle: {
@@ -89,6 +89,6 @@ var styles = StyleSheet.create({
     flex: 1,
     height: 44,
     alignItems: 'center',
-    justifyContent: 'center'
+    marginRight: -10
   }
 });
